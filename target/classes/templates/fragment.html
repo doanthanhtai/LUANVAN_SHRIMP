@@ -1,0 +1,45 @@
+<div th:fragment="header-fragment" class="header">
+    <a href="/zones"><img class="home-logo" th:src="@{/img/logo_main.png}"></a>
+    <div class="middle-header"></div>
+    <div class="right-header dropdown">
+        <img class="notify" th:src="@{/img/notification_icon_15px.png}"></img>
+        <img class="account" th:onclick="myFunction()" th:src="@{/img/account_icon_15px.png}"></img>
+        <div id="myDropdown" class="dropdown-content">
+            <a th:href="@{/changePassword}">Đổi mật khẩu</a>
+            <a th:href="@{/confirmDeleteAccount}">Xóa tài khoản</a>
+            <a th:href="@{/logout}">Đăng xuất</a>
+        </div>
+    </div>
+</div>
+
+<div th:fragment="nav-fragment" class="nav">
+    <a class="nav-item nav-item-zones" href="/zones">
+        <img th:src="@{/img/zone_icon_60px.png}" alt="">
+        <p>Khu Nuôi</p>
+    </a>
+    <br>
+    <a class="nav-item nav-item-shrimps" href="/shrimps">
+        <img th:src="@{/img/shrimp_icon_60px.png}" alt="">
+        <p>Lô Tôm</p>
+    </a>
+    <br>
+    <a class="nav-item nav-item-employees" href="/employees">
+        <img th:src="@{/img/staff_icon_60px.png}" alt="">
+        <p>Nhân Sự</p>
+    </a>
+    <br>
+    <a class="nav-item nav-item-warehouse" href="/warehouse">
+        <img th:src="@{/img/warehouse_icon_60px.png}" alt="">
+        <p>Kho</p>
+    </a>
+    <br>
+    <a class="nav-item nav-item-products" href="/products">
+        <img th:src="@{/img/product_icon_60px.png}" alt="">
+        <p>Sản Phẩm</p>
+    </a>
+    <br>
+    <a class="nav-item nav-item-statistics" href="/statistics">
+        <img th:src="@{/img/chart_icon_60px.png}" alt="">
+        <p>Thống Kê</p>
+    </a>
+</div>

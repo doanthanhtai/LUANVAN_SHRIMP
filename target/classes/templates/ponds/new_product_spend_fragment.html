@@ -1,0 +1,20 @@
+<div th:fragment="new-product-spend-fragment" class="modal js-modal">
+    <div class="modal-container js-modal-container">
+        <header class="modal-header">Tạo lịch sử sử dụng sản phẩm</header>
+        <div class="modal-body">
+            <div class="input-item">
+                <p>Sản phẩm :</p>
+                <select id="product-apply" class="modal-input" style="width: 40%;"></select>
+            </div>
+            <div class="input-item">
+                <p>Lượng SD :</p>
+                <input id="quantity" type="number" class="modal-input" style="width: 20%;"></input>
+                <i id="measure-product">Kg</i>
+            </div>
+            <div class="buttons">
+                <button id="cancel-create-btn" class="">Hủy</button>
+                <button id="submit-create-btn" class="">Thêm</button>
+            </div>
+        </div>
+    </div>
+</div>

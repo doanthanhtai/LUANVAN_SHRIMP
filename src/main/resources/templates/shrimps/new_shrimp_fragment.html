@@ -1,0 +1,32 @@
+<div th:fragment="new-shrimp-fragment" class="modal js-modal">
+    <div class="modal-container js-modal-container">
+        <header class="modal-header">Tạo lô tôm mới</header>
+        <div class="modal-body">
+            <div class="input-item">
+                <p>Tên NCC</p>
+                <input id="shrimp-supplier" type="text" class="modal-input" placeholder="Tên nhà cung cấp">
+            </div>
+            <div class="input-item">
+                <p>Tên giống</p>
+                <input id="shrimp-name" type="text" class="modal-input" placeholder="Tên giống">
+            </div>
+            <br>
+            <div class="input-item quantity-and-price">
+                <p>Số lượng (nghìn con)</p>
+                <input id="shrimp-quantity" type="number" class="modal-input" placeholder="Nghìn con">
+                <p>Giá trị (triệu đồng)</p>
+                <input id="shrimp-price" type="number" class="modal-input" placeholder="VND">
+            </div>
+            <div class="input-item created-time-and-pond">
+                <p>Thời gian thả</p>
+                <input id="shrimp-created-time" type="date" class="modal-input" placeholder="Thời gian thả">
+                <p>Ao được thả</p>
+                <select id="shrimp-pond-id-new" class="modal-input" style="width: 27%;"></select>
+            </div>
+            <div class="buttons">
+                <button id="cancel-btn" class="">Hủy</button>
+                <button id="create-zone-btn" class="">Tạo</button>
+            </div>
+        </div>
+    </div>
+</div>

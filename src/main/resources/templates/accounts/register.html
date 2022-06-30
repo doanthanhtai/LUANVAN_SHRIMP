@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="EI=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký</title>
+    <link rel="stylesheet" th:href="@{css/common.css}">
+    <link rel="stylesheet" th:href="@{css/register.css}">
+    <script th:src="@{js/register.js}"></script>
+    <title>Insert title here</title>
+</head>
+
+<body>
+<div class="main">
+    <div class="content-account-form">
+        <img th:src="@{img/logo.png}" class="logo">
+        <p class="title-account-form"><b>Đăng Ký</b></p>
+        <form th:action="@{register}" method="post" th:object="${account}">
+            <input type="text" placeholder="Họ tên" class="input-email" th:field="*{name}">
+            <br>
+            <input type="text" placeholder="Địa chỉ" class="input-email" th:field="*{address}">
+            <br>
+            <input type="number" placeholder="Số điện thoại" class="input-email" th:field="*{phoneNumber}">
+            <br>
+            <input type="email" placeholder="Email" class="input-email" id="input-email" th:field="*{email}">
+            <br>
+            <input type="password" placeholder="Mật khẩu" class="input-password"
+                   id="input-password" name="password" th:field="*{password}">
+            <br>
+            <div th:text="${exception}" class="alert alert-danger"></div>
+            <button type="submit" id="button-register" class="button-submit"><b>ĐăngKý</b></button>
+        </form>
+        <p>Bạn đã có tài khoản?<a href="/login">Đăng nhập.</a></p>
+    </div>
+</div>
+</body>
+
+</html>

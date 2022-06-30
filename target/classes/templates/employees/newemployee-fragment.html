@@ -1,0 +1,40 @@
+<div th:fragment="new-employee-fragment" class="modal js-modal">
+    <div class="modal-container js-modal-container">
+        <header class="modal-header">Thêm nhân sự mới</header>
+        <div class="modal-body">
+            <div class="input-item">
+                <p>Tên nhân sự</p>
+                <input id="employee-name" type="text" class="modal-input" placeholder="Tên nhân sự">
+            </div>
+            <div class="input-item">
+                <p>Số điện thoại</p>
+                <input id="employee-phone" type="number" class="modal-input" placeholder="Số điện thoại">
+            </div>
+            <br>
+            <div class="input-item onboard-and-saliry">
+                <p>Ngày vào làm</p>
+                <input id="employee-onboard-date" type="date" class="modal-input">
+                <p>Mức lương</p>
+                <input id="employee-saliry" type="number" class="modal-input" placeholder="VND">
+            </div>
+            <div class="input-item bank-no-and-bank-account-name">
+                <p>Số TK NH</p>
+                <input id="employee-bank-no" type="number" class="modal-input" placeholder="Số tài khoản ngân hàng">
+                <p>Tên tài khoản</p>
+                <input id="employee-bank-account-name" type="text" class="modal-input" placeholder="Tên tài khoản ngân hàng">
+            </div>
+            <div class="input-item">
+                <p>Tên NH</p>
+                <input id="employee-bank-name" type="text" class="modal-input" placeholder="Tên ngân hàng">
+            </div>
+            <div class="input-item email-account-app">
+                <p>Email TK UD di động</p>
+                <input id="employee-email-account-app" type="email" class="modal-input" placeholder="email tải khoản ứng dụng di động">
+            </div>
+            <div class="buttons">
+                <button id="cancel-btn" class="">Hủy</button>
+                <button id="create-employee-btn" class="">Thêm nhân sự</button>
+            </div>
+        </div>
+    </div>
+</div>

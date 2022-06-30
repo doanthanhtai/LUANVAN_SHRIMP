@@ -1,0 +1,20 @@
+<div th:fragment="update-enter-product-fragment" class="modal js-modal-enter-product">
+    <div class="modal-container js-modal-container">
+        <header class="modal-header">Cập nhật lịch sử nhập hàng</header>
+        <div class="modal-body">
+            <div class="input-item-id">
+                <p id="enter-history-info" ></p>
+            </div>
+            <div class="input-item-id">
+                <p id="product-info" ></p>
+            </div>
+            <div class="input-item">
+                <label class="product-measure" for="enter-product-quantity">Số lượng</label><input id="enter-product-quantity" type="number" class="modal-input" placeholder="Số lượng nhập" style="width: 30%;">
+            </div>
+            <div class="buttons">
+                <button id="cancel-update-btn" class="cancel-btn">Hủy</button>
+                <button id="submit-update-btn" class="submit-btn">Cập nhật</button>
+            </div>
+        </div>
+    </div>
+</div>

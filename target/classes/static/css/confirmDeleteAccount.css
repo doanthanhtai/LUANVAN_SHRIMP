@@ -1,0 +1,16 @@
+/* CSS for confirmDeleteAccount.html */
+.main{
+    padding-top: 5%;
+    padding-left: 8%;
+    padding-bottom: 8%;
+    background: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-position: center;
+    background-size: cover;
+}
+
+.main .content-account-form form button {
+    margin: 20px 10px;
+}

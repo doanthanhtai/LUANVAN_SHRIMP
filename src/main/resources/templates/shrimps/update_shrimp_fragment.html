@@ -1,0 +1,36 @@
+<div th:fragment="update-shrimp-fragment" class="modal js-modal-update">
+        <div class="modal-container js-modal-container">
+            <header class="modal-header">Cập nhật thông tin lô tôm</header>
+            <div class="modal-body">
+                <div class="input-item_ID">
+                    <pre>Mã lô tôm : </pre>
+                    <p id="shrimp-id" class="value"></p>
+                </div>
+                <div class="input-item">
+                    <p>Tên NCC</p>
+                    <input id="shrimp-supplier-update" type="text" class="modal-input" placeholder="Tên nhà cung cấp">
+                </div>
+                <div class="input-item">
+                    <p>Tên giống</p>
+                    <input id="shrimp-name-update" type="text" class="modal-input" placeholder="Tên giống">
+                </div>
+                <br>
+                <div class="input-item quantity-and-price">
+                    <p>Số lượng</p>
+                    <input id="shrimp-quantity-update" type="number" class="modal-input" placeholder="Số lượng">
+                    <p>Giá trị</p>
+                    <input id="shrimp-price-update" type="number" class="modal-input" placeholder="Giá trị lô giống (VND)">
+                </div>
+                <div class="input-item created-time-and-pond">
+                    <p>Thời gian thả</p>
+                    <input id="shrimp-created-time-update" type="date" class="modal-input" placeholder="Thời gian thả">
+                    <p>Ao được thả</p>
+                    <select id="shrimp-pond-id-update" class="modal-input" style="width: 27%;"></select>
+                </div>
+                <div class="buttons">
+                    <button id="cancel-update-btn" class="">Hủy</button>
+                    <button id="submit-update-btn" class="">Cập nhật</button>
+                </div>
+            </div>
+        </div>
+</div>

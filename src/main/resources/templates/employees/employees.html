@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý nhân viên</title>
+    <link rel="stylesheet" th:href="@{css/common.css}">
+    <link rel="stylesheet" th:href="@{css/employees.css}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<div class="main">
+    <div th:replace="~{/fragment.html :: header-fragment}"></div>
+    <div>
+        <div th:replace="~{/fragment.html :: nav-fragment}"></div>
+        <div class="content">
+            <table class="table-zone">
+                <thead>
+                <tr>
+                    <th>Mã nhân sự</th>
+                    <th>Tên nhân sự</th>
+                    <th>Số điện thoại</th>
+                    <th>Ngày vào làm</th>
+                    <th>Thông tin ngân hàng</th>
+                    <th>Email ứng dụng Adr</th>
+                    <th colspan="2">Tác vụ</th>
+                </tr>
+                </thead>
+                <tbody th:each="employee : ${employees}">
+                <tr>
+                    <td th:text="${employee.id}"></td>
+                    <td th:text="${employee.name}"></td>
+                    <td th:text="${employee.phone}"></td>
+                    <td th:text="${employee.onboardDate}"></td>
+                    <td>
+                        <span th:text="${employee.bankAccountName == '' ? 'Chưa cập nhật' : employee.bankAccountName}"></span>
+                        <br>
+                        <span th:text="${employee.bankNo == '' ? 'Chưa cập nhật' : employee.bankNo}"></span>
+                        <br>
+                        <span th:text="${employee.bankName == '' ? 'Chưa cập nhật' : employee.bankName}"></span>
+                    </td>
+                    <td th:text="${employee.account == '' ? 'Chưa cập nhật' : employee.account.email}"></td>
+                    <td>
+                        <button class="task-btn" th:onclick="showUpdateEmployeeForm('[(${employee.id})]')">Cập nhật</button>
+                    </td>
+                    <td>
+                        <button class="task-btn" th:onclick="deleteEmployee('[(${employee.id})]')">Xóa</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <button href="" class="float" id="new-employee-btn"></button>
+        </div>
+    </div>
+    <div th:replace="~{/employees/newemployee-fragment.html :: new-employee-fragment}"></div>
+    <div th:replace="~{/employees/update_employee_fragment.html :: update-employee-fragment}"></div>
+</div>
+</body>
+<script th:src="@{js/employees.js}"></script>
+</html>

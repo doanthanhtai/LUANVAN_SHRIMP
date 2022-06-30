@@ -1,0 +1,30 @@
+<div th:fragment="update-zone-fragment" class="modal js-modal-update">
+    <div class="modal-container js-modal-container">
+        <header class="modal-header">Cập nhật khu nuôi</header>
+        <div class="modal-body">
+            <div class="input-item-id">
+                <pre>Mã khu nuôi : </pre>
+                <p id="zone-id" ></p>
+            </div>
+            <div class="input-item">
+                <p>Tên khu nuôi</p>
+                <input id="zone-name-update" type="text" class="modal-input" placeholder="Tên khu nuôi">
+            </div>
+            <br>
+            <div class="input-item area-and-create-time">
+                <p>Diện tích</p>
+                <input id="zone-area-update" type="number" class="modal-input area-input" placeholder="Diện tích (ha)">
+                <p>Ngày tạo</p>
+                <input id="zone-create-time-update" type="date" class="modal-input" placeholder="Ngày tạo">
+            </div>
+            <div class="input-item">
+                <p>Địa chỉ</p>
+                <input id="zone-address-update" type="text" class="modal-input" placeholder="Địa chỉ">
+            </div>
+            <div class="buttons">
+                <button id="cancel-update-btn" class="">Hủy</button>
+                <button id="update-zone-btn" class="">Lưu lại</button>
+            </div>
+        </div>
+    </div>
+</div>

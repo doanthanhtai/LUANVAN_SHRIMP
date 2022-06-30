@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý lịch sử nhập hàng</title>
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/enter_histories.css}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<div class="main">
+    <div th:replace="~{/enterhistories/fragment.html :: header-fragment}"></div>
+    <div>
+        <div th:replace="~{/enterhistories/fragment.html :: nav-fragment}"></div>
+        <div class="content">
+            <table class="table-zone">
+                <thead>
+                <tr>
+                    <th>Mã lich sử</th>
+                    <th>Mã kho</th>
+                    <th>Mã sản phẩm</th>
+                    <th>Tên sản phẩm</th>
+                    <th>Lượng nhập</th>
+                    <th>Ngày nhập</th>
+                    <th>Ngày cập nhật</th>
+                    <th colspan="2" >Tác vụ</th>
+                </tr>
+                </thead>
+                <tbody th:each="enterHistory : ${enterHistories}">
+                <tr>
+                    <td th:text="${enterHistory.id}"></td>
+                    <td th:text="${enterHistory.getProductQuantity().getWareHouse().getId()}"></td>
+                    <td th:text="${enterHistory.getProductQuantity().getProduct().getId()}"></td>
+                    <td th:text="${enterHistory.getProductQuantity().getProduct().getName()}"></td>
+                    <td th:text="${enterHistory.getQuantity()}"></td>
+                    <td th:text="${enterHistory.getCreatedTime()}"></td>
+                    <td th:text="${enterHistory.getUpdatedTime()}"></td>
+                    <td>
+                        <button class="task-btn" th:onclick="showUpdateEnterHistoryForm('[(${enterHistory.id})]')" >Cập nhật</button>
+                    </td>
+                    <td>
+                        <button class="task-btn" th:onclick="onDelete('[(${enterHistory.id})]')">Xóa</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div th:replace="~{/enterhistories/update_enter_product_fragment.html :: update-enter-product-fragment}"></div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script th:src="@{/js/common.js}"></script>
+<script th:src="@{/js/enter_histories.js}"></script>
+<link rel="stylesheet" th:href="@{/css/enter_histories.css}">
+</html>

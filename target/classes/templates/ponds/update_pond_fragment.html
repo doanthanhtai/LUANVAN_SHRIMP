@@ -1,0 +1,35 @@
+<div th:fragment="update-pond-fragment" class="modal js-modal-update">
+        <div class="modal-container js-modal-container">
+            <header class="modal-header">Cập nhật thông tin ao</header>
+            <div class="modal-body">
+                <div class="input-item-id">
+                    <p>Mã ao:</p>
+                    <p id="pond-id"></p>
+                </div>
+                <div class="input-item">
+                    <p>Tên ao:</p>
+                    <input id="pond-name-update" type="text" class="modal-input" placeholder="Tên ao">
+                </div>
+                <br>
+                <div class="input-item area-and-create-time">
+                    <p>Loại ao:</p>
+                    <select name="" id="pond-type-update" class="modal-select">
+                        <option value="false">Ao nuôi</option>
+                        <option value="true">Ao lắng</option>
+                    </select>
+                    <p>Ngày tạo:</p>
+                    <input type="date" class="modal-input" name="" id="pond-create-time-update">
+                </div>
+                <div class="input-item area-and-create-time">
+                    <p>Diện tích:</p>
+                    <input type="number" class="modal-input" name="" id="pond-area-update" placeholder="m&sup2;">
+                    <p>Độ cao nước:</p>
+                    <input type="number" class="modal-input" name="" id="pond-water-height-update" placeholder="m">
+                </div>
+                <div class="buttons">
+                    <button id="cancel-update-btn" class="">Hủy</button>
+                    <button id="submit-update-btn" class="">Lưu lại</button>
+                </div>
+            </div>
+        </div>
+</div>

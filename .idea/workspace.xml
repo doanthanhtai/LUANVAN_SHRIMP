@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f8b89544-8fa7-4530-8e4e-033165911675" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="28kPfsyUVu1fLzaOCS1oRKnzC2i" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;SELECTIVE&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Can Tho University Of Technology/LUANVAN-D/shrimp/src/main/resources/templates/products&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;2126df62fb2cc26595ab26dcb19f0b24&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Can Tho University Of Technology\LUANVAN-D\shrimp\src\main\resources\templates\products" />
+      <recent name="D:\Can Tho University Of Technology\LUANVAN-D\shrimp\src\main\resources\static\img" />
+      <recent name="D:\Can Tho University Of Technology\LUANVAN-D\shrimp\src\main\resources\templates\enterhistories" />
+      <recent name="D:\Can Tho University Of Technology\LUANVAN-D\shrimp\src\main\resources\static\css" />
+      <recent name="D:\Can Tho University Of Technology\LUANVAN-D\shrimp\src\main\resources\templates\warehouse" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Can Tho University Of Technology\LUANVAN-D\shrimp\src\main\resources\templates\ponds" />
+      <recent name="D:\Can Tho University Of Technology\LUANVAN-D\shrimp\src\main\resources\templates" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="PondManageApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="PondManage" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pondmanage.PondManageApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" />
+      <module name="PondManage" />
+      <option name="SPRING_BOOT_MAIN_CLASS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpringBeansView">
+    <option name="showModules" value="false" />
+    <option name="showImplicitBeans" value="false" />
+    <option name="showInfrastructureBeans" value="false" />
+    <option name="showDoc" value="false" />
+    <option name="showGraph" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8b89544-8fa7-4530-8e4e-033165911675" name="Changes" comment="" />
+      <created>1651757723314</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1651757723314</updated>
+      <workItem from="1651757725640" duration="1236000" />
+      <workItem from="1651848691130" duration="8201000" />
+      <workItem from="1651903889196" duration="108000" />
+      <workItem from="1651904025912" duration="187000" />
+      <workItem from="1651904310403" duration="1010000" />
+      <workItem from="1651905438704" duration="14449000" />
+      <workItem from="1651920495085" duration="1784000" />
+      <workItem from="1651926979718" duration="713000" />
+      <workItem from="1651927749172" duration="242000" />
+      <workItem from="1651928113177" duration="2407000" />
+      <workItem from="1651938043663" duration="2496000" />
+      <workItem from="1651940640549" duration="861000" />
+      <workItem from="1651941518026" duration="12030000" />
+      <workItem from="1652001117091" duration="5118000" />
+      <workItem from="1652012075361" duration="3119000" />
+      <workItem from="1652021732552" duration="14825000" />
+      <workItem from="1652107150871" duration="11881000" />
+      <workItem from="1652189950425" duration="226000" />
+      <workItem from="1652190605642" duration="9161000" />
+      <workItem from="1652360586557" duration="3041000" />
+      <workItem from="1652367961977" duration="5582000" />
+      <workItem from="1652490659412" duration="4245000" />
+      <workItem from="1652498366178" duration="861000" />
+      <workItem from="1652530960318" duration="10000" />
+      <workItem from="1652536204465" duration="4398000" />
+      <workItem from="1652545153472" duration="4270000" />
+      <workItem from="1652570262865" duration="6133000" />
+      <workItem from="1652596114753" duration="1502000" />
+      <workItem from="1652602976157" duration="10362000" />
+      <workItem from="1652619713154" duration="4040000" />
+      <workItem from="1652626770824" duration="9990000" />
+      <workItem from="1652638462457" duration="63000" />
+      <workItem from="1652713938781" duration="6084000" />
+      <workItem from="1652846711090" duration="1022000" />
+      <workItem from="1652886262333" duration="2204000" />
+      <workItem from="1653105538461" duration="1502000" />
+      <workItem from="1653133662947" duration="1742000" />
+      <workItem from="1653263581984" duration="2252000" />
+      <workItem from="1653307640113" duration="5631000" />
+      <workItem from="1653317525333" duration="9375000" />
+      <workItem from="1653348861645" duration="2111000" />
+      <workItem from="1653426113231" duration="8486000" />
+      <workItem from="1653482432220" duration="5438000" />
+      <workItem from="1653491321491" duration="3931000" />
+      <workItem from="1653522975458" duration="1579000" />
+      <workItem from="1653566265005" duration="13168000" />
+      <workItem from="1653677880663" duration="6051000" />
+      <workItem from="1653693185369" duration="2136000" />
+      <workItem from="1653736563275" duration="8958000" />
+      <workItem from="1653818906928" duration="4177000" />
+      <workItem from="1653830872988" duration="4403000" />
+      <workItem from="1653910191347" duration="617000" />
+      <workItem from="1654005750849" duration="9873000" />
+      <workItem from="1654031695358" duration="591000" />
+      <workItem from="1654099161441" duration="3727000" />
+      <workItem from="1654302141553" duration="5709000" />
+      <workItem from="1654314861122" duration="2033000" />
+      <workItem from="1654349301828" duration="10431000" />
+      <workItem from="1654387129270" duration="1939000" />
+      <workItem from="1654433314306" duration="6758000" />
+      <workItem from="1654468456217" duration="2209000" />
+      <workItem from="1654474500101" duration="1108000" />
+      <workItem from="1654516599317" duration="12795000" />
+      <workItem from="1654532869752" duration="1364000" />
+      <workItem from="1654605872010" duration="5343000" />
+      <workItem from="1654645778842" duration="1490000" />
+      <workItem from="1654725784083" duration="2967000" />
+      <workItem from="1654740713487" duration="6390000" />
+      <workItem from="1654777745775" duration="797000" />
+      <workItem from="1654790422214" duration="3288000" />
+      <workItem from="1654813436078" duration="1284000" />
+      <workItem from="1654863426109" duration="858000" />
+      <workItem from="1654866794823" duration="698000" />
+      <workItem from="1654875391343" duration="1556000" />
+      <workItem from="1654959219813" duration="7788000" />
+      <workItem from="1654999674774" duration="5205000" />
+      <workItem from="1655046504490" duration="1965000" />
+      <workItem from="1655250887658" duration="1947000" />
+      <workItem from="1655835408058" duration="3252000" />
+      <workItem from="1655943398625" duration="606000" />
+      <workItem from="1655988150111" duration="4233000" />
+      <workItem from="1656128810545" duration="4129000" />
+      <workItem from="1656133176484" duration="602000" />
+      <workItem from="1656143984128" duration="609000" />
+      <workItem from="1656221049642" duration="1124000" />
+      <workItem from="1656347492953" duration="17000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

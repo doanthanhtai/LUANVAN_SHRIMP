@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quản lý sản phẩm</title>
+	<link rel="stylesheet" th:href="@{css/common.css}">
+	<link rel="stylesheet" th:href="@{css/products.css}">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+	<div class="main">
+		<div th:replace="~{/fragment.html :: header-fragment}"></div>
+		<div>
+			<div th:replace="~{/fragment.html :: nav-fragment}"></div>
+			<div class="content">
+				<table class="table-zone">
+					<thead>
+					<tr>
+						<th>Mã sản phẩm</th>
+						<th>Tên sản phẩm</th>
+						<th>Tên nhà cung cấp</th>
+						<th>Giá nhập</th>
+						<th>Đơn vị nhập / ĐVSD</th>
+						<th>Cập nhật</th>
+						<th>Xóa</th>
+					</tr>
+					</thead>
+					<tbody th:each="product : ${products}">
+					<tr>
+						<td th:text="${product.id}"></td>
+						<td th:text="${product.name}"></td>
+						<td th:text="${product.supplier}"></td>
+						<td th:text="${product.enterPrice}"></td>
+						<td th:text="${product.measure}"></td>
+						<td>
+							<button class="task-btn" th:onclick="showUpdateForm('[(${product.id})]')">Cập nhật</button>
+						</td>
+						<td>
+							<button class="task-btn">Xóa</button>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				<button class="float" id="new-product-btn"></button>
+			</div>
+		</div>
+		<div th:replace="~{/products/new_product_fragment.html :: new-product-fragment}"></div>
+		<div th:replace="~{/products/update_product_fragment.html :: update-product-fragment}"></div>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script th:src="@{js/common.js}"></script>
+<script th:src="@{js/products.js}"></script>
+</html>

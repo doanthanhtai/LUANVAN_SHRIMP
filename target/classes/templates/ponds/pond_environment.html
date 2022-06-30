@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý môi trường</title>
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/pond_environment.css}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<div class="main">
+    <div th:replace="~{/ponds/fragment.html :: header-fragment}"></div>
+    <div>
+        <div th:replace="~{/ponds/fragment.html :: nav-fragment}"></div>
+        <div class="content">
+            <table class="table-zone">
+                <thead>
+                <tr>
+                    <th>Mã ao</th>
+                    <th>Tên ao</th>
+                    <th>Diện tích</th>
+                    <th>Ngày tạo</th>
+                    <th>Mực nước</th>
+                    <th>Loại</th>
+                    <th>Tình trang</th>
+                    <th>Email TK quản lý</th>
+                    <th colspan="3" >Tác vụ</th>
+                </tr>
+                </thead>
+<!--                <tbody th:each="pond : ${ponds}">-->
+<!--                <tr>-->
+<!--                    <td th:text="${pond.id}"></td>-->
+<!--                    <td th:text="${pond.name}"></td>-->
+<!--                    <td th:text="${pond.area}"></td>-->
+<!--                    <td th:text="${pond.createdTime}"></td>-->
+<!--                    <td th:text="${pond.waterHeight}"></td>-->
+<!--                    <td th:text="${pond.pondType == false ? 'Ao nuôi' : 'Ao lắng'}"></td>-->
+<!--                    <td th:text="${pond.status == false ? 'Đg không nuôi' : 'Đang nuôi'}"></td>-->
+<!--                    <td th:text="${pond.emailManager == null ? 'Chưa cập nhật' : pond.emailManager}"></td>-->
+<!--                    <td>-->
+<!--                        <a class="link-pond-detail" th:href="@{'/pond/' + ${pond.id}}" methods="GET" >Chi tiết</a>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                        <button class="task-btn" th:onclick="showUpdatePondForm('[(${pond.id})]')" >Cập nhật</button>-->
+<!--                    </td>-->
+<!--                    <td>-->
+<!--                        <button class="task-btn" th:onclick="onDelete('[(${pond.id})]')">Xóa</button>-->
+<!--                    </td>-->
+<!--                </tr>-->
+<!--                </tbody>-->
+            </table>
+            <div class="float-tab">
+                <a th:href="@{'/pond/id=' + ${pond.id} + '/product_spends'}" class="" id="product-spends-tab">SỬ DỤNG SẢN PHẨM</a>
+                <a th:href="@{'/pond/id=' + ${pond.id} + '/other_spends'}" class="" id="other-spends-tab">CHI DÙNG KHÁC</a>
+                <a th:href="@{'/pond/id=' + ${pond.id} + '/environment'}" class="" id="environment-tab">MÔI TRƯỜNG</a>
+            </div>
+            <button class="float" id="show-modal-create-btn"></button>
+        </div>
+    </div>
+    <label for="pond-contain-id"></label><input id="pond-contain-id" th:value="${pond.id}" hidden/>
+    <label for="zone-contain-id"></label><input id="zone-contain-id" th:value="${pond.zone.getId()}" hidden/>
+    <div th:replace="~{/ponds/new_pond_fragment.html :: new-pond-fragment}"></div>
+    <div th:replace="~{/ponds/update_pond_fragment.html :: update-pond-fragment}"></div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script th:src="@{/js/common.js}"></script>
+<script th:src="@{/js/pond_environment.js}"></script>
+</html>

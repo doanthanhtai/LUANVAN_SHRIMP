@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý tôm</title>
+    <link rel="stylesheet" th:href="@{css/common.css}">
+    <link rel="stylesheet" th:href="@{css/shrimps.css}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<div class="main">
+    <div th:replace="~{/fragment.html :: header-fragment}"></div>
+    <div>
+        <div th:replace="~{/fragment.html :: nav-fragment}"></div>
+        <div class="content">
+            <table class="table-zone">
+                <thead>
+                <tr>
+                    <th>Mã lô giống</th>
+                    <th>Mã ao thả</th>
+                    <th>Tên giống</th>
+                    <th>Tên NCC</th>
+                    <th>Số lượng</th>
+                    <th>Giá trị</th>
+                    <th>Ngày thả</th>
+                    <th>Ngày thu</th>
+                    <th colspan="2">Tác vụ</th>
+                </tr>
+                </thead>
+                <tbody th:each="shrimp : ${shrimps}">
+                <tr>
+                    <td th:text="${shrimp.id}"></td>
+                    <td th:text="${shrimp.pond == null ? 'Đã thu' : shrimp.pond.getId() }"></td>
+                    <td th:text="${shrimp.name}"></td>
+                    <td th:text="${shrimp.supplier}"></td>
+                    <td th:text="${#numbers.formatInteger(shrimp.quantity, 3)}"></td>
+                    <td th:text="${#numbers.formatInteger(shrimp.price, 3)}"></td>
+                    <td th:text="${shrimp.createTime}"></td>
+                    <td th:text="${shrimp.harvestTime == null ? 'Đang nuôi' : shrimp.harvestTime }"></td>
+                    <td th:if="${shrimp.harvestTime == null}">
+                        <button class="task-btn" th:onclick="showConfirmHarvestForm('[(${shrimp.id})]')">Thu</button>
+                        <button class="task-btn" th:onclick="showUpdateShrimpForm('[(${shrimp.id})]')">Cập nhật</button>
+                    </td>
+                    <td th:if="${shrimp.harvestTime != null}">
+                        <button class="task-btn" th:onclick="showConfirmDeleteForm('[(${shrimp.id})]')">Xóa</button>
+                        <button class="task-btn">BC-Chi tiết</button>
+                        <button class="task-btn">BC-Ngắn</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <button class="float" id="new-shrimp-btn"></button>
+        </div>
+    </div>
+    <div th:replace="~{/shrimps/new_shrimp_fragment.html :: new-shrimp-fragment}"></div>
+    <div th:replace="~{/shrimps/update_shrimp_fragment.html :: update-shrimp-fragment}"></div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script th:src="@{js/common.js}"></script>
+<script th:src="@{js/shrimps.js}"></script>
+</html>

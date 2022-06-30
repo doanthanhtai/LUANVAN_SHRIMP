@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý chế độ ăn</title>
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/ponds.css}">
+    <link rel="stylesheet" th:href="@{/css/diets.css}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<div class="main">
+    <div th:replace="~{/ponds/fragment.html :: header-fragment}"></div>
+    <div>
+        <div th:replace="~{/ponds/fragment.html :: nav-fragment}"></div>
+        <div class="content">
+            <table class="table-zone">
+                <thead>
+                <tr>
+                    <th>Mã ao áp dung</th>
+                    <th>Mã sản phẩm cho ăn</th>
+                    <th>Tên sản phẩm cho ăn</th>
+                    <th>Lượng ăn</th>
+                    <th>Thời gian mỗi lần ăn</th>
+                    <th>Trạng thái</th>
+                    <th colspan="3">Tác vụ</th>
+                </tr>
+                </thead>
+                <tbody th:each="diet : ${diets}">
+                <tr>
+                    <td th:text="${diet.getShrimp().getPond().getId()}"></td>
+                    <td th:text="${diet.getProduct().getId()}"></td>
+                    <td th:text="${diet.getProduct().getName()}"></td>
+                    <td th:text="${diet.quantity}"></td>
+                    <td th:text="${diet.longTime}"></td>
+                    <td>
+                        <label class="switch" th:if="${diet.status}">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+                        <label class="switch" th:if="${diet.status == false}">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <br>
+                        <p th:text="${diet.status == true ? 'Đang ăn' : 'Đang ko ăn'}"></p>
+                    </td>
+                    <td>
+                        <a class="link-diet-detail" th:href="@{'/pond/id=' + ${diet.getShrimp().getPond().getId()} + '/feeding_histories'}" methods="GET" >Lịch sử cho ăn</a>
+                    </td>
+                    <td>
+                        <button class="task-btn" th:onclick="showUpdateDietForm('[(${diet.id})]')" >Cập nhật</button>
+                    </td>
+                    <td>
+                        <button class="task-btn" th:onclick="onDelete('[(${diet.id})]')">Xóa</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="float-tab">
+                <a th:href="@{'/zones/id=' + ${zone.id} + '/ponds'}" class="" id="pond-tab">Ao</a>
+                <a th:href="@{'/zones/id=' + ${zone.id} + '/diets'}" class="" id="diet-tab">Chế độ ăn</a>
+            </div>
+            <button href="" class="float" id="show-modal-create-btn"></button>
+        </div>
+    </div>
+    <input id="zone-contain-id" th:value="${zone.id}" hidden/>
+    <div th:replace="~{/diets/new_diet_fragment.html :: new-diet-fragment}"></div>
+    <div th:replace="~{/diets/update_diet_fragment.html :: update-diet-fragment}"></div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script th:src="@{/js/common.js}"></script>
+<script th:src="@{/js/diets.js}"></script>
+</html>

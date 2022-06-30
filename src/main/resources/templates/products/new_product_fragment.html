@@ -1,0 +1,33 @@
+<div th:fragment="new-product-fragment" class="modal js-modal">
+    <div class="modal-container js-modal-container">
+        <header class="modal-header">Tạo sản phẩm mới</header>
+        <div class="modal-body">
+
+            <div class="input-item">
+                <p>Tên sản phẩm:</p>
+                <input id="product-name" type="text" class="modal-input" placeholder="Tên sản phẩm">
+            </div>
+            <div class="input-item">
+                <p>Tên NCC:</p>
+                <input id="product-supplier" type="text" class="modal-input" placeholder="Tên nhà cung cấp">
+            </div>
+            <div class="input-item">
+                <p>Giá nhập:</p>
+                <input id="product-enter-price" type="number" class="modal-input" placeholder="Giá nhập (VND)" style="width: 60%;">
+                <select id="product-measure" class="modal-input" style="margin-left: 20px; width: 15%;">
+                    <option value="Kg">Kg</option>
+                    <option value="Chai">Chai</option>
+                    <option value="Lit">lit</option>
+                    <option value="ml">ml</option>
+                    <option value="Bao/Gói">Bao/gói</option>
+                    <option value="Tip">Tip</option>
+                    <option value="Viên">Viên</option>
+                </select>
+            </div>
+            <div class="buttons">
+                <button id="cancel-create-btn" class="task-btn">Hủy</button>
+                <button id="submit-create-btn" class="task-btn">Tạo</button>
+            </div>
+        </div>
+    </div>
+</div>

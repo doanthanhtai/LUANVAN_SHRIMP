@@ -1,0 +1,26 @@
+<div th:fragment="new-zone-fragment" class="modal js-modal">
+    <div class="modal-container js-modal-container">
+        <header class="modal-header">Tạo khu nuôi mới</header>
+        <div class="modal-body">
+            <div class="input-item">
+                <p>Tên khu nuôi</p>
+                <input id="zone-name" type="text" class="modal-input" placeholder="Tên khu nuôi">
+            </div>
+            <br>
+            <div class="input-item area-and-create-time">
+                <p>Diện tích</p>
+                <input id="zone-area" type="number" class="modal-input area-input" placeholder="Diện tích (ha)">
+                <p>Ngày tạo</p>
+                <input id="zone-create-time" type="date" class="modal-input" placeholder="Ngày tạo">
+            </div>
+            <div class="input-item">
+                <p>Địa chỉ</p>
+                <input id="zone-address" type="text" class="modal-input" placeholder="Địa chỉ">
+            </div>
+            <div class="buttons">
+                <button id="cancel-insert-btn" class="">Hủy</button>
+                <button id="create-zone-btn" class="">Xác nhận tạo KN</button>
+            </div>
+        </div>
+    </div>
+</div>

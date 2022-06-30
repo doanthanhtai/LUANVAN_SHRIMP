@@ -1,0 +1,268 @@
+/* CSS common */
+/* Reset CSS */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    display: block;
+	width: 100vw;
+    height: 100vh;
+}
+
+/* css for header in home */
+.header{
+	float : left;
+    width: 100vw;
+    height: 6vh;
+    background-color: lightslategray;
+}
+
+/* css for logo in home */
+.home-logo{
+    float: left;
+    width: 10vw;
+    height: 80%;
+    margin: 4px;
+    border-radius: 10px;
+}
+
+/* css for midle header */
+.middle-header{
+    float: left;
+    width: 80vw;
+    height: 6vh;
+}
+
+/* css for right header */
+.right-hoader {
+    float: left;
+    width: 10vw;
+    height: 6vh;
+}
+
+/* css for notity icon */
+.right-header .notify {
+	float : left;
+	padding : 5px;
+	margin-left : 5px;
+	width: 3vw;
+	height : 6vh;
+}
+
+/* css for account icon */
+.right-header .account{
+	float : right;
+	padding : 5px;
+	margin-right : 10px;
+	width: 3vw;
+	height : 6vh;
+}
+
+/* css for nav */
+.nav{
+	float : left;
+	width : 7vw;
+	height : 94vh;
+    background-color: gainsboro;
+}
+
+/* css for nav itme */
+.nav-item {
+	float : left;
+    background-color: white;
+    width: 90%;
+    height: 10%;
+    text-align: center;
+    font-size: 12px;
+    color: black;
+    margin : 5px;
+    padding : 5px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-radius : 10px;
+}
+
+/* css for nav item hover */
+.nav-item:hover{
+	background-color : darkturquoise;
+}
+
+/* css for icon nav */
+.nav-item img {
+	width : auto;
+	height : auto;
+}
+
+/* css for main content */
+.content {
+	float : left;
+	width : 93vw;
+	height : 94vh;
+}
+
+/* css for float button new */
+.content .float {
+	position : fixed;
+	width : 60px;
+	height : 60px;
+	bottom : 40px;
+	right : 40px;
+    background-color: lightslategray;
+    background-image: url("../img/plus_icon_50px.png");
+	color : #fff;
+	border-radius : 100px;
+	text-align : center;
+	box-shadow : 2px 2px 3px #999;
+    opacity: 0.8;
+}
+
+.content .float:hover {
+    opacity: 1.1;
+}
+
+.content .float-tab {
+    position : fixed;
+    width : fit-content;
+    height : fit-content;
+    bottom : 0;
+    display: flex;
+    float: left;
+}
+
+.content .float-tab a {
+    padding: 5px 10px;
+    margin: 0;
+    border: black 1px solid;
+    border-radius: 0;
+    color: black;
+    text-decoration: none;
+}
+
+.content .float-tab a:hover {
+    background: #00ad88;
+    color: white;
+}
+
+/* css for logo account form*/
+.logo{
+    width: 50%;
+    height:25%;
+    opacity: 0.9;
+    border-radius: 15px;
+}
+
+/* css for title account form */
+.title-account-form{
+    margin-top: 20px;
+    font-size: 26px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+
+/* form content for account form */
+.content-account-form{
+    width : 30vw;
+    box-sizing: border-box;
+    height: 70vh;
+    padding-top: 4%;
+    padding-bottom: 5%;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* css for email input account form*/
+.input-email{
+    margin-top: 15px;
+    width: 70%;
+    height: 30px;
+    padding: 5px;
+}
+
+/* css for password input account form */
+.input-password{
+    margin-top: 10px;
+    width: 70%;
+    height: 30px;
+    padding: 5px;
+}
+
+/* css for button submit */
+.button-submit{
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+/* css for button cancel */
+.button-cancel{
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.heed {
+    padding: 20px;
+    font-size: 12px;
+    font-family: Cambria, serif;
+    text-align: left;
+}
+
+/* css for fragmentheader.html */
+/*css for img account */
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 125px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display:block;
+}
+
+/* css for task button on rows */
+.task-btn {
+    border: 1px solid white;
+    padding: 2px 5px;
+    background: none;
+}
+
+.task-btn:hover {
+    color: white;
+    border: 1px solid white;
+    background: #009688;
+}

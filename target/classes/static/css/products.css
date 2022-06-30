@@ -1,0 +1,160 @@
+.nav .nav-item-products {
+	background-color: cyan;
+}
+
+* {
+	font-family: sans-serif;
+}
+
+.table-zone {
+	width: 100%;
+	/*border-collapse: collapse;*/
+	margin: 0;
+	font-size: 0.9em;
+	min-width: 400px;
+	border-radius: 5px 5px 0 0;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+	text-align: center;
+}
+
+.table-zone thead tr {
+	background-color: #009879;
+	color: #ffffff;
+	font-weight: bold;
+	text-align: center;
+}
+
+.table-zone th,
+.table-zone td {
+	padding: 12px 15px;
+}
+
+.table-zone tbody tr {
+	border-bottom: 1px solid #dddddd;
+}
+
+.table-zone tbody tr:nth-of-type(even) {
+	background-color: #f3f3f3;
+}
+
+.table-zone tbody tr:last-of-type {
+	border-bottom: 2px solid #009879;
+}
+
+.table-zone tbody tr.active-row {
+	font-weight: bold;
+	color: #009879;
+}
+
+/*------------------------------ MODAL--------------------- */
+.modal { /*Phủ toàn bộ website*/
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.4);
+	align-items: center; /*Căn giữa chiều cao*/
+	justify-content: center; /*Căn giữa chiều ngang*/
+	display: none;
+}
+
+.modal.open {
+	display: flex;
+}
+
+.modal-container {
+	background: #fff;
+	width: 700px;
+	min-height: 200px;
+	max-width: calc(100% - 32px);
+	position: relative;
+	animation: modalFadeIn ease 0.5s;
+}
+
+.modal-header {
+	background: #009688;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 30px;
+	color: #fff;
+}
+
+.modal-body {
+	padding: 16px 25px;
+}
+
+.modal-body p {
+	font-size: 15px;
+}
+
+.modal-input {
+	border: 1px solid #ccc;
+	padding: 10px;
+	font-size: 15px;
+	width: 80%;
+}
+
+.modal-body .input-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 24px;
+}
+
+.modal-body .area-and-create-time input {
+	width: 30%;
+}
+
+.modal-body .input-item * {
+	float: left;
+	margin-bottom: 0px;
+}
+
+.modal-body .buttons {
+	display: flex;
+	justify-content: space-evenly;
+	margin-bottom: 10px;
+}
+
+#cancel-create-btn, #submit-create-btn {
+	background: #009688;
+	border: none;
+	color: #fff;
+	width: fit-content;
+	padding: 14px;
+	cursor: pointer;
+}
+
+#cancel-create-btn:hover, #submit-create-btn:hover {
+	opacity: 0.9;
+}
+
+#cancel-update-btn, #submit-update-btn {
+	background: #009688;
+	border: none;
+	color: #fff;
+	width: fit-content;
+	padding: 14px;
+	cursor: pointer;
+}
+
+#cancel-update-btn:hover, #submit-update-btn:hover {
+	opacity: 0.9;
+}
+
+
+@keyframes modalFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-140px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+
+	}
+}

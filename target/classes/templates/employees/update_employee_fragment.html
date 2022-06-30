@@ -1,0 +1,45 @@
+<div th:fragment="update-employee-fragment" class="modal js-modal-update">
+    <div class="modal-container js-modal-container">
+        <header class="modal-header">Cập nhật thông tin nhân sự</header>
+        <div class="modal-body">
+            <div class="input-item_ID">
+                <p>Mã nhân sự:</p>
+                <p class="value" id="employee-id"></p>
+            </div>
+            <div class="input-item">
+                <p>Tên nhân sự:</p>
+                <input id="employee-name-update" type="text" class="modal-input" placeholder="Tên nhân sự">
+            </div>
+            <div class="input-item">
+                <p>Số điện thoại:</p>
+                <input id="employee-phone-update" type="text" class="modal-input" placeholder="Số diện thoại">
+            </div>
+
+            <div class="input-item area-and-create-time">
+                <p>Ngày vào làm:</p>
+                <input type="date" class="modal-input" name="" id="employee-onboard-date-update" style="width: 27%;">
+
+                <p>Mực lương:</p>
+                <input type="text" class="modal-input" name="" id="employee-saliry-update" style="width: 27%;">
+                <p class="p_last">VND</p>
+            </div>
+            <div class="input-item area-and-create-time">
+                <p>Số TK NH:</p>
+                <input type="number" class="modal-input" name="" id="employee-bank-no-update" placeholder="Số tài khoản"
+                       style="width: 27%;">
+                <p>Tên tài khoản:</p>
+                <input id="employee-bank-account-name-update" type="text" class="modal-input"
+                       placeholder="Tên tài khoản" style="width: 27%;">
+            </div>
+            <div class="input-item ">
+                <p>Tên NH:</p>
+                <input id="employee-bank-name-update" type="text" class="modal-input" placeholder="Tên ngân hàng">
+            </div>
+
+            <div class="buttons">
+                <button id="cancel-update-btn" class="">Hủy</button>
+                <button id="submit-update-btn" class="">Lưu lại</button>
+            </div>
+        </div>
+    </div>
+</div>

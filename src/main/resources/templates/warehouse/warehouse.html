@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý kho</title>
+    <link rel="stylesheet" th:href="@{css/common.css}">
+    <link rel="stylesheet" th:href="@{css/warehouse.css}">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<div class="main">
+    <div th:replace="~{/fragment.html :: header-fragment}"></div>
+    <div>
+        <div th:replace="~{/fragment.html :: nav-fragment}"></div>
+        <div class="content">
+            <table class="table-zone">
+                <thead>
+                <tr>
+                    <th>Mã kho</th>
+                    <th>Tên kho</th>
+                    <th>Mã khu nuôi kho thuộc</th>
+                    <th>Tên khu nuôi</th>
+                    <th colspan="4">Tác vụ</th>
+                </tr>
+                </thead>
+                <tbody th:each="warehouse : ${warehouse}">
+                <tr>
+                    <td th:text="${warehouse.id}"></td>
+                    <td th:text="${warehouse.name}"></td>
+                    <td th:text="${warehouse.zone.id}"></td>
+                    <td th:text="${warehouse.zone.name}"></td>
+                    <td>
+                        <a class="link-enter-histories-manage" th:href="@{'/warehouse/id=' + ${warehouse.id} +'/enter_histories'}" methods="GET" >Lịch sử nhập hàng</a>
+                    </td>
+                    <td>
+                        <button class="task-btn" th:onclick="showEnterProductForm('[(${warehouse.id})]')">Nhập hàng
+                        </button>
+                    </td>
+                    <td>
+                        <button class="task-btn" th:onclick="showUpdateWareHouseForm('[(${warehouse.id})]')">Cập nhật
+                        </button>
+                    </td>
+                    <td>
+                        <button class="task-btn" th:onclick="showConfirmDeleteForm('[(${warehouse.id})]')">Xóa</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <button class="float" id="new-warehouse-btn"></button>
+        </div>
+    </div>
+    <div th:replace="~{/warehouse/new_ware_house_fragment.html :: new-ware-house-fragment}"></div>
+    <div th:replace="~{/warehouse/update_ware_house_fragment.html :: update-ware-house-fragment}"></div>
+    <div th:replace="~{/warehouse/enter_product.html :: enter-product-fragment}"></div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script th:src="@{js/common.js}"></script>
+<script th:src="@{js/warehouse.js}"></script>
+</html>
